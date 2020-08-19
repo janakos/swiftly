@@ -1,0 +1,4 @@
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.csprojAssemblyReference.cache
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.AssemblyInfoInputs.cache
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.AssemblyInfo.cs
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.csproj.CoreCompileInputs.cache
