@@ -1,22 +1,23 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
-using DataProcessor;
 using System;
-using System.Linq;
+using DataProcessor;
 
 class Program
 {
     static void Main(string[] args)
     {
+        // Test Input Parser
         Parser p = new Parser("C:\\Users\\alexj\\source\\repos\\swiftly\\sample.txt");
-        List<Dictionary<string, string>> data = p.ParseFile();
-        foreach (var row in data)
+        Dictionary<string, List<string>> data = p.ParseFile();
+
+        foreach (KeyValuePair<string, List<string>> item in data)
         {
-            foreach (KeyValuePair<string, string> item in row)
+            Console.WriteLine(item.Key);
+            foreach (string s in item.Value)
             {
-                Console.WriteLine(item.Key);
-                Console.WriteLine(item.Value);
+                Console.WriteLine(s);
             }
         }
     }
