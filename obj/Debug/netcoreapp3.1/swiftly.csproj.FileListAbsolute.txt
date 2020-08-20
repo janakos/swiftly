@@ -2,3 +2,12 @@ C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.csprojAssemb
 C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.AssemblyInfoInputs.cache
 C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.AssemblyInfo.cs
 C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.csproj.CoreCompileInputs.cache
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.exe
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.deps.json
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.runtimeconfig.json
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.runtimeconfig.dev.json
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.dll
+C:\Users\alexj\source\repos\swiftly\bin\Debug\netcoreapp3.1\swiftly.pdb
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.dll
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.pdb
+C:\Users\alexj\source\repos\swiftly\obj\Debug\netcoreapp3.1\swiftly.genruntimeconfig.cache

@@ -3,8 +3,9 @@
     "",
     "\\bin",
     "\\bin\\Debug",
-    "\\bin\\Debug\\netcoreapp3.1"
+    "\\bin\\Debug\\netcoreapp3.1",
+    "\\obj"
   ],
-  "SelectedNode": "\\swiftly.csproj",
+  "SelectedNode": "\\sample.txt",
   "PreviewInSolutionExplorer": false
 }
