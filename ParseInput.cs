@@ -7,7 +7,6 @@ namespace DataProcessor
 {
     public class Parser
     {
-        string path;
 
         // Schema for input data, each field is specified by a name along with location and length
         Dictionary<string, int[]> field_cords = new Dictionary<string, int[]>
@@ -24,19 +23,14 @@ namespace DataProcessor
              {"product_size",                   new int[2] {133, 9}},
         };
 
-        public Parser(string path)
-        {
-            this.path = path;
-        }
-
         /* 
          * Read data from a single file
          * Iterate over each row of text data and separate into disctinct fields
          * Logic used is defined by schema dictionary above
          */
-        public Dictionary<string, List<string>> ParseFile()
+        public Dictionary<string, List<string>> ParseFile(string path)
         {
-            IEnumerable<string> input_data = File.ReadLines(this.path);
+            IEnumerable<string> input_data = File.ReadLines(path);
             Dictionary<string, List<string>> output = InitializeOutputDict();
 
             foreach (string row in input_data)
