@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System;
 
 
@@ -24,13 +25,12 @@ namespace DataProcessor
         };
 
         /* 
-         * Read data from a single file
-         * Iterate over each row of text data and separate into disctinct fields
-         * Logic used is defined by schema dictionary above
+         * Iterate through each line of text from file
+         * Use FieldCords object to create substring representing each field
          */
         public Dictionary<string, List<string>> ParseFile(string path)
         {
-            IEnumerable<string> inputData = File.ReadLines(path);
+            List<string> inputData = ReadLines(path);
             Dictionary<string, List<string>> output = InitializeOutputDict();
 
             foreach (string row in inputData)
@@ -43,6 +43,33 @@ namespace DataProcessor
                 }
             }
             return output;
+        }
+
+        /*
+         * Iterate through each char in file using a StreamReader object
+         * Add to List<char> until newline is reach then append to List<string> lines
+         * then clear List<char> line so we can take in a new set of chars
+         */
+        private List<string> ReadLines(string path)
+        {
+            List<string> lines = new List<string>();
+            using (StreamReader streamReader = new StreamReader(path))
+            {
+                List<char> line = new List<char>();
+                while (streamReader.Peek() >= 0)
+                {
+                    char c = (char)streamReader.Read();
+                    if (c.Equals('\n')) {
+                        lines.Add(new string(line.ToArray()));
+                        line.Clear();
+                    } 
+                    else 
+                    {
+                        line.Add(c);
+                    }
+                }
+            }
+            return lines;
         }
 
         // Initialize Dictionary with appropriate keys and empty List<String>
