@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\netcoreapp3.1"
   ],
-  "SelectedNode": "\\Main.cs",
+  "SelectedNode": "\\bin\\Debug\\netcoreapp3.1\\swiftly.exe",
   "PreviewInSolutionExplorer": false
 }
