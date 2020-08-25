@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DataProcessor;
 
-class Swiflty
+class Swiftly
 {
     static void Main(string[] args)
     {
