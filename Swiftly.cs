@@ -12,7 +12,7 @@ class Swiflty
         Transformer transformer = new Transformer();
         List<ProductRecord> finalData = transformer.TransformToProductRecord(parsedData);
 
-        foreach (var r in finalData)
+        foreach (ProductRecord r in finalData)
         {
             Console.WriteLine(r);
         }
