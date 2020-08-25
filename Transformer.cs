@@ -89,8 +89,9 @@ namespace DataProcessor
             }
         }
 
-        // Transformation methods
+        // Begin transformation methods //////
 
+        // Perform transformation on any display price field
         private string TransformDisplayPrice(Dictionary<string, string> row, string priceLevel)
         {
             // Convert priceString to double, handle decimal appropriately
@@ -103,6 +104,7 @@ namespace DataProcessor
             return !Convert.ToBoolean(priceDouble) ? "0" : splitPrefix + "$" + priceDouble.ToString("F");
         }
 
+        // Perform transformation on any calculator price field
         private decimal TransformCalculatorPrice(Dictionary<string, string> row, string priceLevel)
         {
             // Convert priceString to double, handle decimal appropriately
@@ -115,6 +117,9 @@ namespace DataProcessor
             return !Convert.ToBoolean(priceDouble) ? 0 : Math.Round(priceDouble / splitDenominator, 4, MidpointRounding.ToZero);
         }
 
+        // Helper function which returns price string converted into a double
+        // Selects correct price field to use for downstream logic
+        // Used in TransformDisplayPrice and TransformCalculatorPrice
         private double setPriceAsDouble(Dictionary<string, string> row, string priceLevel)
         {
             bool isSingular = Convert.ToDouble(row[priceLevel + "SingularPrice"]) != 0 ? true : false;
