@@ -65,7 +65,7 @@ namespace DataProcessor
             }
         }
 
-        // Run transformation on currentRow to general finalizedRow
+        // Run transformation on currentRow to generate finalizedRow
         private Dictionary<string, object> transformRow(Dictionary<string, string> currentRow, Dictionary<string, object> finalizedRow)
         {
             finalizedRow["productId"] =                     currentRow["productId"];
