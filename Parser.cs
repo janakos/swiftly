@@ -13,8 +13,8 @@ namespace DataProcessor
         {
              {"productId",                  new int[2] {0, 8}},
              {"productDescription",         new int[2] {9, 58}},
-             {"regularSingularPrice",      new int[2] {69, 8}},
-             {"promotionalSingularPrice",  new int[2] {78, 8}},
+             {"regularSingularPrice",       new int[2] {69, 8}},
+             {"promotionalSingularPrice",   new int[2] {78, 8}},
              {"regularSplitPrice",          new int[2] {87, 8}},
              {"promotionalSplitPrice",      new int[2] {96, 8}},
              {"regularForX",                new int[2] {105, 8}},

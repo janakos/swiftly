@@ -21,7 +21,7 @@ namespace DataProcessor
             List<ProductRecord> records = new List<ProductRecord>();
 
             // Add data from FinalizedData: Dictionary<string, List<object>> into records: List<ProductRecord>
-            for (int i = 0; i < this.FinalizedData["productId"].Count; i++)
+            for (int i = 0; i < FinalizedData["productId"].Count; i++)
             {
                 ProductRecord pr = new ProductRecord();
                 foreach (KeyValuePair<string, List<object>> item in this.FinalizedData)
@@ -60,12 +60,12 @@ namespace DataProcessor
                 // Write transformed data into FinalizedData: Dictionary<string, List<object>>
                 foreach (PropertyInfo property in typeof(ProductRecord).GetProperties())
                 {
-                    this.FinalizedData[property.Name].Add(finalizedRow[property.Name]);
+                    FinalizedData[property.Name].Add(finalizedRow[property.Name]);
                 }
             }
         }
 
-        // Run transformation on currentRow to generate finalizedRow
+        // Run transformation on currentRow to general finalizedRow
         private Dictionary<string, object> transformRow(Dictionary<string, string> currentRow, Dictionary<string, object> finalizedRow)
         {
             finalizedRow["productId"] =                     currentRow["productId"];
@@ -85,7 +85,7 @@ namespace DataProcessor
         {
             foreach (PropertyInfo property in typeof(ProductRecord).GetProperties())
             {
-                this.FinalizedData[property.Name] = new List<object>();
+                FinalizedData[property.Name] = new List<object>();
             }
         }
 
