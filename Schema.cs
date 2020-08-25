@@ -8,9 +8,9 @@ namespace DataProcessor
         public int productId { get; set; }
         public string productDescription { get; set; }
         public string regularDisplayPrice { get; set; }
-        public double regularCalculatorPrice { get; set; }
+        public decimal regularCalculatorPrice { get; set; }
         public string promotionalDisplayPrice { get; set; }
-        public double promotionalCalculatorPrice { get; set; }
+        public decimal promotionalCalculatorPrice { get; set; }
         public string unitOfMeasure { get; set; }
         public string productSize { get; set; }
         public double taxRate { get; set; }
