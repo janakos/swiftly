@@ -23,7 +23,7 @@ namespace DataProcessor
             for (int i = 0; i < FinalizedData["productId"].Count; i++)
             {
                 ProductRecord pr = new ProductRecord();
-                foreach (KeyValuePair<string, List<object>> item in this.FinalizedData)
+                foreach (KeyValuePair<string, List<object>> item in FinalizedData)
                 {
                     PropertyInfo propertyInfo = pr.GetType().GetProperty(item.Key);
                     propertyInfo.SetValue(pr, Convert.ChangeType(item.Value[i], propertyInfo.PropertyType), null);
@@ -54,7 +54,7 @@ namespace DataProcessor
                 }
 
                 // Run transformation per row
-                finalizedRow = transformRow(currentRow, finalizedRow);
+                finalizedRow = TransformRow(currentRow, finalizedRow);
 
                 // Write transformed data into FinalizedData: Dictionary<string, List<object>>
                 foreach (PropertyInfo property in typeof(ProductRecord).GetProperties())
@@ -65,7 +65,7 @@ namespace DataProcessor
         }
 
         // Run transformation on currentRow to generate finalizedRow
-        private Dictionary<string, object> transformRow(Dictionary<string, string> currentRow, Dictionary<string, object> finalizedRow)
+        private Dictionary<string, object> TransformRow(Dictionary<string, string> currentRow, Dictionary<string, object> finalizedRow)
         {
             finalizedRow["productId"] =                     currentRow["productId"];
             finalizedRow["productDescription"] =            currentRow["productDescription"];
